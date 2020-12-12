@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.Window
 import androidx.appcompat.app.AppCompatActivity
+import com.whitezone.whitezone.ui.home.HomeFragment
 
 
 @Suppress("DEPRECATION")
@@ -17,7 +18,7 @@ class SplashScreen : AppCompatActivity() {
         setContentView(R.layout.activity_splash_screen)
         val handler = Handler()
         handler.postDelayed({
-            startActivity(Intent(applicationContext, MainActivity::class.java))
+            startActivity(Intent(applicationContext, Login::class.java))
             finish()
         }, 3000L) //3000 L = 3 detik
     }

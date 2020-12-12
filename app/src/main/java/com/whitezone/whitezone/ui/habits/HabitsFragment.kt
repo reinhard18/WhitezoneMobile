@@ -24,10 +24,7 @@ class HabitsFragment : Fragment() {
         habitsViewModel =
                 ViewModelProviders.of(this).get(HabitsViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_habits, container, false)
-        val textView: TextView = root.findViewById(R.id.text_dashboard)
-        habitsViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+
         return root
     }
 }
